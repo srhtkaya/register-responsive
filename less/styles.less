@@ -14,16 +14,6 @@ body {
   font-family: brandon-grotesque, sans-serif;
 }
 
-nav {
-  width: 100%;
-  height: 10%;
-  margin: 8% auto;
-}
-
-li {
-  display: inline-block;
-}
-
 h1 {
   margin: 29% auto;
   text-align: center;
@@ -72,4 +62,31 @@ footer > a {
   font-size: 12px;
   text-decoration: none;
   color: gray;
+}
+
+.nav-breadcrumb {
+  list-style-type: none;
+  width: 90%;
+  height: 2rem;
+  padding: 5%;
+  display: flex;
+  flex-direction: row wrap;
+  justify-content: space-around;
+}
+
+.nav-crumb {
+  width: 0.3em;
+  height: 0.3em;
+  background: #fff;
+  border-radius: 100%;
+
+  &:focus {
+
+  }
+}
+
+.nav-crumb--divider {
+  width: 3em;
+  height: 1px;
+  background: #fff;
 }
