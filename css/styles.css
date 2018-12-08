@@ -1,75 +1,163 @@
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Montserrat Regular'), local('Montserrat-Regular'), url(https://fonts.gstatic.com/s/montserrat/v12/JTUSjIg1_i6t8kCHKm459Wlhzg.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Montserrat Bold'), local('Montserrat-Bold'), url(https://fonts.gstatic.com/s/montserrat/v12/JTURjIg1_i6t8kCHKm45_dJE3gnD-w.ttf) format('truetype');
+}
 html {
-  height: 100%;
+  height: 100vh;
   font-size: 20px;
 }
 body {
-  min-height: 100%;
-  background: no-repeat linear-gradient(#ff6a3a, #000000);
-  padding: 5%;
+  background: linear-gradient(#ff6a3a, #000000);
   color: #fff;
-  font-family: brandon-grotesque, sans-serif;
+  padding: 20px;
+  font-family: 'Montserrat', sans-serif;
+}
+nav .nav-breadcrumb {
+  width: 100%;
+  height: 30px;
+  margin: 0 auto;
+  text-align: center;
+  padding-left: 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+nav .nav-breadcrumb li {
+  display: inline-block;
+  position: relative;
+}
+nav .nav-breadcrumb li .inner-circle {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 4px;
+  height: 4px;
+  background: white;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+}
+nav .nav-breadcrumb li .outer-circle {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+nav .nav-breadcrumb li .outer-circle .crumb--current,
+nav .nav-breadcrumb li .outer-circle:hover {
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.3);
+  -webkit-box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.3);
+  -moz-box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.3);
+}
+nav .nav-breadcrumb li .divider {
+  position: absolute;
+  top: 26px;
+  content: '';
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  width: 50px;
+  margin: 10px;
 }
 h1 {
-  margin: 29% auto;
+  font-size: 24px;
+  font-weight: 700;
   text-align: center;
-  font-size: 20px;
-  font-weight: bold;
+  margin: 100px 0 100px 0;
 }
-input {
+.main-container {
   width: 100%;
-  height: 3rem;
-  margin-bottom: 4%;
-  border-radius: 3em;
-  font-size: 14px;
-  border: 0;
-  width: 95%;
-  height: 1rem;
-  background: rgba(255, 255, 255, 0.1);
-  padding: 1rem 0 1rem 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
-input::placeholder {
-  color: white;
+.form-register {
+  margin: 0 auto;
+  min-width: 400px;
+}
+.input-container {
+  position: relative;
+  display: flex;
+  color: #fff;
+  margin-bottom: 16px;
+  font-size: 16px;
+}
+.input-container input {
+  width: 100%;
+  height: 64px;
+  max-width: 600px;
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  border-radius: 32px;
+  text-indent: 64px;
+}
+.input-container input::placeholder {
+  color: #fff;
+  font-size: 16px;
+}
+.input-container input:focus {
+  color: #fff;
+  outline: none;
+}
+.input-container .input-icon {
+  flex-grow: 1;
+  position: absolute;
+}
+.input-container .input-icon--name {
+  width: 40px;
+  height: 16px;
+  left: 20px;
+  top: 25px;
+  background: url('../img/icons.png') -70px -10px;
+  background-repeat: no-repeat;
+  transform: scale(0.6);
+}
+.input-container .input-icon--email {
+  width: 40px;
+  height: 34px;
+  left: 20px;
+  top: 15px;
+  background: url('../img/icons.png') -130px -10px;
+  background-repeat: no-repeat;
+  transform: scale(0.6);
+}
+.input-container .input-icon--password {
+  width: 40px;
+  height: 52px;
+  left: 20px;
+  top: 5px;
+  background: url('../img/icons.png') -10px -10px;
+  background-repeat: no-repeat;
+  transform: scale(0.6);
 }
 button {
   width: 100%;
-  height: 3rem;
-  margin-bottom: 4%;
-  border-radius: 3em;
-  font-size: 14px;
-  margin-top: 10%;
+  height: 64px;
+  max-width: 600px;
   background: none;
-  border: 1px solid gray;
+  border-radius: 32px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
   color: white;
-  font-weight: bold;
+  font-weight: 700;
+  font-size: 16px;
+  margin-top: 48px;
+}
+button:focus {
+  outline: none;
+  box-shadow: 0 0 5px 5px;
 }
 footer {
-  width: 100%;
-  height: 5%;
-  margin-top: 2%;
+  min-height: 50px;
   text-align: center;
+  margin-top: 30px;
 }
-footer > a {
-  font-size: 12px;
+footer a {
+  font-size: 13px;
   text-decoration: none;
   color: gray;
-}
-.nav-breadcrumb {
-  list-style-type: none;
-  width: 90%;
-  height: 2rem;
-  padding: 5%;
-  display: flex;
-  flex-direction: row wrap;
-  justify-content: space-around;
-}
-.nav-crumb {
-  width: 0.3em;
-  height: 0.3em;
-  background: #fff;
-  border-radius: 100%;
-}
-.nav-crumb--divider {
-  width: 3em;
-  height: 1px;
-  background: #fff;
 }

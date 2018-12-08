@@ -10,21 +10,32 @@
     <header>
     <nav>
         <ul class="nav-breadcrumb">
-            <li class="nav-crumb nav-crumb--current"></li>
-            <span class="nav-crumb--divider"></span>
-            <li class="nav-crumb"></li>
-            <span class="nav-crumb--divider"></span>
-            <li class="nav-crumb"></li>
+            <li class="nav-crumb nav-crumb--current"><div class="outer-circle"><div class="inner-circle"></div></div></li>
+            <span class="divider"></span>
+            <li class="nav-crumb"><div class="outer-circle"><div class="inner-circle"></div></div></li>
+            <span class="divider"></span>
+            <li class="nav-crumb"><div class="outer-circle"><div class="inner-circle"></div></div></li>
         </ul>
     </nav>
     </header>
+    <div class="main-container">
     <h1>CREATE ACCOUNT</h1>
     <form class="form-register">
-        <input class="input--name" type="text" placeholder="Name" required />
-        <input class="input--email" type="email" placeholder="Email" required />
-        <input class="input--password" type="password" placeholder="Password" required />
+        <div class="input-container">
+          <span class="input-icon input-icon--name"></span>
+          <input class="input--name" type="text" placeholder="Name" required />
+        </div>
+        <div class="input-container">
+          <span class="input-icon input-icon--email"></span>
+          <input class="input--email" type="email" placeholder="Email" required />
+        </div>
+        <div class="input-container">
+          <span class="input-icon input-icon--password"></span>
+          <input class="input--password" type="password" placeholder="Password" required />
+        </div>
         <button type="submit" name="button">Continue</button>
     </form>
+    </div>
     <footer>
         <a href="#">Terms & Conditions</a>
     </footer>
