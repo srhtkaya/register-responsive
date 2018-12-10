@@ -23,10 +23,8 @@
   src: local('Montserrat ExtraBold'), local('Montserrat-ExtraBold'), url(https://fonts.gstatic.com/s/montserrat/v12/JTURjIg1_i6t8kCHKm45_c5H3gnD-w.ttf) format('truetype');
 }
 html {
-  min-height: 100vh;
   font-size: 13px;
   color: #fff;
-  background: linear-gradient(#ff6a3a, #000000);
 }
 body {
   font-family: 'Montserrat', sans-serif;
@@ -162,9 +160,7 @@ body {
   justify-content: flex-end;
 }
 .main-container-a {
-  height: 100vh;
-  width: 100%;
-  padding: 20px;
+  height: 95vh;
   background: linear-gradient(#ff6a3a, #000000);
 }
 .main-container-a .input {
@@ -176,8 +172,7 @@ body {
   background: none;
 }
 .main-container-b {
-  height: 100vh;
-  width: 100%;
+  min-height: 95vh;
   padding: 20px;
   background: linear-gradient(#3aa9ff, #000000);
 }
