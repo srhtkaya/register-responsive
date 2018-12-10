@@ -7,37 +7,57 @@
     <link rel="stylesheet" type="text/css" href="css/styles.css" />
   </head>
   <body>
+    <div class="main-container-a">
     <header>
-    <nav>
-        <ul class="nav-breadcrumb">
-            <li class="nav-crumb nav-crumb--current"><div class="outer-circle"><div class="inner-circle"></div></div></li>
-            <span class="divider"></span>
-            <li class="nav-crumb"><div class="outer-circle"><div class="inner-circle"></div></div></li>
-            <span class="divider"></span>
-            <li class="nav-crumb"><div class="outer-circle"><div class="inner-circle"></div></div></li>
+      <nav class="breadcrumb">
+        <ul class="breadcrumb__ul">
+          <li class="breadcrumb__item">
+            <div class="breadcrumb__item--outer breadcrumb__item--current">
+              <div class="breadcrumb__item--inner">
+                <a href="#"></a>
+              </div>
+            </div>
+          </li>
+          <div class="breadcrumb__divider"></div>
+          <li class="breadcrumb__item">
+            <div class="breadcrumb__item--outer">
+              <div class="breadcrumb__item--inner">
+                <a href="#"></a>
+              </div>
+            </div>
+          </li>
+          <div class="breadcrumb__divider"></div>
+          <li class="breadcrumb__item">
+            <div class="breadcrumb__item--outer">
+              <div class="breadcrumb__item--inner">
+                <a href="#"></a>
+              </div>
+            </div>
+          </li>
         </ul>
-    </nav>
+      </nav>
     </header>
-    <div class="main-container">
-    <h1>CREATE ACCOUNT</h1>
-    <form class="form-register">
-        <div class="input-container">
-          <span class="input-icon input-icon--name"></span>
-          <input class="input--name" type="text" placeholder="Name" required />
+    <div class="container__content">
+      <h1 class="title">CREATE ACCOUNT</h1>
+      <form class="form__register">
+        <div class="container__txt-field">
+          <span class="input__icon input__icon--name"></span>
+          <input class="input input--name" type="text" placeholder="Name" required />
         </div>
-        <div class="input-container">
-          <span class="input-icon input-icon--email"></span>
-          <input class="input--email" type="email" placeholder="Email" required />
+        <div class="container__txt-field">
+          <span class="input__icon input__icon--email"></span>
+          <input class="input input--email" type="email" placeholder="Email" required />
         </div>
-        <div class="input-container">
-          <span class="input-icon input-icon--password"></span>
-          <input class="input--password" type="password" placeholder="Password" required />
+        <div class="container__txt-field">
+          <span class="input__icon input__icon--password"></span>
+          <input class="input input--password" type="password" placeholder="Password" required />
         </div>
-        <button type="submit" name="button">Continue</button>
-    </form>
+        <button class="btn" type="submit" name="button">Continue</button>
+      </form>
     </div>
-    <footer>
-        <a href="#">Terms & Conditions</a>
+    <footer class="footer">
+        <a class="footer__a" href="#">Terms & Conditions</a>
     </footer>
+    </div>
   </body>
 </html>
