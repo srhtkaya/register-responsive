@@ -1,45 +1,36 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,700,800');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:500,800');
 
 @background-a: linear-gradient(#ff6a3a, #000000);
 @background-b: linear-gradient(#3aa9ff, #000000);
 @background-btn-a: none;
 @background-btn-b: white;
-@border-radius-a: 32px;
+@border-radius-a: 2rem;
 @border-radius-b: none;
-@color-btn-a: white;
-@color-btn-b: black;
+@color-btn-a: #fff;
+@color-btn-b: #000;
 
-@font-size: 13px;
+@font-size: 35px;
 @font-color: #fff;
 @font-family: 'Montserrat', sans-serif;
 @background-input: rgba(255,255,255,0.1);
 
-#box-shadowing(){
-  box-shadow: 0 0 0 1px rgba(255,255,255,0.3);
-  -webkit-box-shadow: 0 0 0 1px rgba(255,255,255,0.3);
-  -moz-box-shadow: 0 0 0 1px rgba(255,255,255,0.3);
-}
-
 html {
+  font-family: @font-family;
   font-size: @font-size;
   color: @font-color;
 }
 
-body {
-  font-family: @font-family;
-}
-
 .breadcrumb {
-  width: 350px;
-  height: 33px;
+  width: 24.6rem;
+  height: 2.5rem;
   margin: 0 auto;
-  margin-top: 10px;
+  margin-top: 0.8em;
   display: flex;
   flex-grow: row;
   justify-content: space-around;
 }
 
-.breadcrumb__ul {
+.breadcrumb__list {
   list-style-type: none;
   padding: 0;
 }
@@ -50,18 +41,18 @@ body {
 
 .breadcrumb__divider {
   display: inline-block;
-  width: 70px;
-  height: 1px;
+  width: 5.4rem;
+  height: 0.08rem;
   background: rgba(255,255,255,0.3);
-  margin: 7px;
+  margin: 0.8rem;
 }
 
 .breadcrumb__item--outer {
   position: relative;
-  width: 23px;
-  height: 23px;
+  width: 1.8rem;
+  height: 1.8rem;
   border-radius: 50%;
-  border: 1px solid rgba(0,0,0,0);
+  border: 0.08rem solid rgba(255,255,255,0);
   top: 5px;
 }
 
@@ -71,40 +62,42 @@ body {
 
 .breadcrumb__item--inner {
   position: absolute;
-  width: 5px;
-  height: 5px;
+  width: 0.4rem;
+  height: 0.4rem;
   border-radius: 50%;
   background: white;
   z-index: 1;
-  top: 9px;
-  left: 9px;
+  top: 0.7rem;
+  left: 0.7rem;
 }
 
 .title {
-  font-size: 19px;
+  font-size: 1.46rem;
   font-weight: 800;
   text-align: center;
-  margin: 105px 0 105px 0;
+  margin: 8.1rem 0 8.1rem 0;
 }
 
 .form__register {
   margin: 0 auto;
-  min-width: 320px;
+  width: 24.6rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 
 .container__txt-field {
   position: relative;
   display: flex;
   color: #fff;
-  margin-bottom: 14px;
+  margin-bottom: 1.1rem;
 
   .input {
     width: 100%;
-    height: 52px;
-    max-width: 400px;
+    height: 4rem;
     background: @background-input;
     border: none;
-    text-indent: 60px;
+    text-indent: 4.6rem;
     color: white;
 
     &::placeholder{
@@ -119,31 +112,30 @@ body {
   }
 
   .input__icon {
+    width: 40px;
+    left: 1.8rem;
     flex-grow: 1;
     position: absolute;
-    width: 40px;
     background-repeat: no-repeat;
-    transform: scale(0.5);
+    transform: scale(1.5);
   }
 
   .input__icon--name {
     height: 16px;
-    left: 13px;
-    top: 20px;
+    top: 1.8rem;
     background: url('../img/icons.png') -70px -10px;
   }
 
 
   .input__icon--email {
     height: 34px;
-    left: 13px;
-    top: 10px;
+    top: 1.4rem;
     background: url('../img/icons.png') -130px -10px;
   }
 
   .input__icon--password {
     height: 52px;
-    left: 13px;
+    top: 1rem;
     background: url('../img/icons.png') -10px -10px;
   }
 
@@ -151,39 +143,33 @@ body {
 
 .btn {
   width: 100%;
-  height: 52px;
-  max-width: 600px;
+  height: 4rem;
+  min-width: 24.6rem;
   border: 1px solid rgba(255,255,255,0.3);
   font-weight: 800;
-  margin-top: 40px;
-
-  &:focus {
-    outline: none;
-    box-shadow: 0 0 2px 2px;
-  }
+  margin-top: 3.1rem;
 }
 
 .footer {
   text-align: center;
-  margin-top: 20px;
+  margin-top: 1.5rem;
 }
 
-.footer__a {
-  font-size: 11px;
+.footer__anchor {
+  font-size: 0.8rem;
   font-weight: 500;
   text-decoration: none;
-  color: gray;
+  color: #fff;
+  opacity: 0.5;
 }
 
 .container__content {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
+
 }
 
 .main-container-a {
   height: 95vh;
+  padding: 1.5rem;
   background: @background-a;
 
   .input {
@@ -194,6 +180,11 @@ body {
     color: @color-btn-a;
     border-radius: @border-radius-a;
     background: @background-btn-a;
+
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 2px 2px;
+    }
   }
 }
 
@@ -210,5 +201,10 @@ body {
     color: @color-btn-b;
     border-radius: @border-radius-b;
     background: @background-btn-b;
+
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 3px 3px #3aa9ff;
+    }
   }
 }
