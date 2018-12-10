@@ -20,13 +20,21 @@ html {
   color: @font-color;
 }
 
+.header {
+  height: 60vh;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
 .breadcrumb {
-  width: 24.6rem;
+  width: 25rem;
   height: 2.5rem;
   margin: 0 auto;
   margin-top: 0.8em;
+  flex-grow: 1;
   display: flex;
-  flex-grow: row;
   justify-content: space-around;
 }
 
@@ -44,13 +52,13 @@ html {
   width: 5.4rem;
   height: 0.08rem;
   background: rgba(255,255,255,0.3);
-  margin: 0.8rem;
+  margin: 0.9rem;
 }
 
 .breadcrumb__item--outer {
   position: relative;
-  width: 1.8rem;
-  height: 1.8rem;
+  width: 2rem;
+  height: 2rem;
   border-radius: 50%;
   border: 0.08rem solid rgba(255,255,255,0);
   top: 5px;
@@ -67,23 +75,23 @@ html {
   border-radius: 50%;
   background: white;
   z-index: 1;
-  top: 0.7rem;
-  left: 0.7rem;
+  top: 0.8rem;
+  left: 0.8rem;
 }
 
 .title {
+  flex-grow: 2;
   font-size: 1.46rem;
   font-weight: 800;
   text-align: center;
-  margin: 8.1rem 0 8.1rem 0;
+  /*margin: 8.1rem 0 8.1rem 0;*/
 }
 
-.form__register {
+.form {
+  position: absolute;
+  bottom: 3.8rem;
   margin: 0 auto;
   width: 24.6rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
 }
 
 .container__txt-field {
@@ -117,7 +125,7 @@ html {
     flex-grow: 1;
     position: absolute;
     background-repeat: no-repeat;
-    transform: scale(1.5);
+    transform: scale(1.3);
   }
 
   .input__icon--name {
@@ -129,13 +137,13 @@ html {
 
   .input__icon--email {
     height: 34px;
-    top: 1.4rem;
+    top: 1.55rem;
     background: url('../img/icons.png') -130px -10px;
   }
 
   .input__icon--password {
     height: 52px;
-    top: 1rem;
+    top: 1.2rem;
     background: url('../img/icons.png') -10px -10px;
   }
 
@@ -145,12 +153,16 @@ html {
   width: 100%;
   height: 4rem;
   min-width: 24.6rem;
-  border: 1px solid rgba(255,255,255,0.3);
+  border: 0.1rem solid rgba(255,255,255,0.3);
   font-weight: 800;
   margin-top: 3.1rem;
 }
 
 .footer {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 1.5rem;
   text-align: center;
   margin-top: 1.5rem;
 }
@@ -163,12 +175,9 @@ html {
   opacity: 0.5;
 }
 
-.container__content {
-
-}
-
 .main-container-a {
-  height: 95vh;
+  position: relative;
+  min-height: 95vh;
   padding: 1.5rem;
   background: @background-a;
 
@@ -189,8 +198,9 @@ html {
 }
 
 .main-container-b {
+  position: relative;
   min-height: 95vh;
-  padding: 20px;
+  padding: 1.5rem;
   background: @background-b;
 
   .input {
